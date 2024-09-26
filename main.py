@@ -36,15 +36,3 @@ def register():
     conn.close()
     return redirect(url_for('index'))
 
-@app.route('/delete/<int:id>', methods=['GET', 'POST'])
-def delete(id):
-    if request.method == 'POST':
-        conn = sqlite3.connect(DATABASE)
-        conn.execute("DELETE FROM books WHERE id=?", (id,))
-        conn.commit()
-        conn.close()
-        return redirect(url_for('index'))
-    else:
-        # Display confirmation dialog (optional)
-        # ...
-        return render_template('delete_confirmation.html', id=id)  # Optional confirmation page
