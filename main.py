@@ -26,13 +26,12 @@ def form():
 
 @app.route('/register', methods=['POST'])
 def register():
-    id = request.form['id']
     title = request.form['title']
     joint = request.form['joint']
     level = request.form['level']
 
     conn = sqlite3.connect(DATABASE)
-    conn.execute("INSERT INTO books VALUES (?, ?, ?, ?)", (id, title, joint, level))
+    conn.execute("INSERT INTO books VALUES (?, ?, ?)", (title, joint, level))
     conn.commit()
     conn.close()
     return redirect(url_for('index'))
