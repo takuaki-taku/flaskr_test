@@ -1,7 +1,8 @@
+
 from flask import Flask
 import flask
 app=Flask(__name__)
-import main
+import main as main
 
 from flaskr import db
 db.create_books_table()
