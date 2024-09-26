@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>アズトレデータベース</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>アズトレデータベース</h1>
+    <form method="post" action="{{ url_for('register') }}">
+        </form>
+
+    <table>
+        <tr>
+            <th>タイトル</th>
+            <th>関節</th>
+            <th>レベル</th>
+            <th>操作</th>
+        </tr>
+        {% for data in data_list %}
+        <tr>
+            <td>{{ data.title }}</td>
+            <td>{{ data.joint }}</td>
+            <td>{{ data.level }}</td>
+            <td>
+                <a href="#" onclick="return confirm('{{ data.title }} を削除しますか？')">削除</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <table>
+        <tr>
+            <th>タイトル</th>
+            <th>関節</th>
+            <th>レベル</th>
+            <th>操作</th>
+        </tr>
+        {% for data in data_list %}
+        <tr>
+            <td>{{ data.title }}</td>
+            <td>{{ data.joint }}</td>
+            <td>{{ data.level }}</td>
+            <td>
+                <a href="#" onclick="return confirm('{{ data.title }} を削除しますか？')">削除</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+

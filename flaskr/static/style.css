@@ -1,0 +1,84 @@
+/* テーブル全体のスタイル */
+.my-table {
+    width: 80%; /* テーブルの幅を指定（必要に応じて調整） */
+    margin: 0 auto; /* 左右のマージンを自動にして中央揃え */
+    border-collapse: collapse; /* ボーダーを重ねて表示 */
+}
+
+/* テーブルのヘッダーのスタイル */
+.my-table th {
+    background-color: #ADD8E6; /* ヘッダーの背景色を薄いブルーに指定 */
+    color: #000; /* ヘッダーの文字色を黒に指定 */
+    font-size: 16px; /* フォントサイズを指定 */
+    padding: 15px; /* パディングを指定（余白を増やす） */
+    text-align: center; /* テキストを中央に配置 */
+}
+
+/* テーブルのセルのスタイル */
+.my-table td {
+    padding: 15px; /* パディングを指定（余白を増やす） */
+    text-align: center; /* テキストを中央に配置 */
+    border: 1px solid #ddd; /* セルのボーダーを指定 */
+}
+
+/* h1タグのスタイル */
+h1 {
+    background-color: #ADD8E6; /* ヘッダーの背景色を薄いブルーに指定 */
+    color: #000; /* ヘッダーの文字色を黒に指定 */
+    padding: 10px; /* パディングを指定 */
+    text-align: center; /* テキストを中央に配置 */
+    max-width: 1000px; /* 最大幅を指定 */
+    margin: 0 auto; /* 中央揃え */
+}
+
+/* h2タグのスタイル */
+h2 {
+    
+    color: #000; /* 文字色を黒に指定 */
+    padding: 10px; /* パディングを指定 */
+    text-align: center; /* テキストを中央に配置 */
+    text-decoration: underline; /* アンダーラインを追加 */
+    text-decoration-color: #ADD8E6; /* アンダーラインの色を薄いブルーに指定 */
+}
+
+/* ボタンを囲むコンテナのスタイル */
+.button-container {
+    width: 80%; /* テーブルと同じ幅を指定 */
+    margin: 20px auto; /* 上下のマージンを指定し、中央揃え */
+    text-align: center; /* 中央揃え */
+}
+
+/* 編集ボタンのスタイル */
+.edit-button {
+    display: inline-block; /* インラインブロック要素として表示 */
+    max-width: 150px; /* 最大幅を指定 */
+    padding: 10px 15px; /* パディングを指定 */
+    background-color: #ADD8E6; /* 背景色を薄いブルーに指定 */
+    color: #000; /* 文字色を黒に指定 */
+    text-align: center; /* テキストを中央に配置 */
+    text-decoration: none; /* 下線を消す */
+    border-radius: 5px; /* 角を丸くする */
+}
+
+/* bodyのスタイル */
+body {
+    background-color: #F0F8FF; /* 薄い青 */
+    margin: 0; /* 余白をなくす */
+    width: 80%; /* 例として80%に設定 */
+    margin: 0 auto; /* 画面の中央に配置 */
+}
+
+/* 見出しのスタイル */
+h1 {
+    text-align: center; /* 見出しを中央揃え */
+    margin-bottom: 20px; /* 見出しとフォームの間の余白 */
+}
+
+/* フォームのスタイル */
+form {
+    /* 既存のスタイルはそのまま */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}

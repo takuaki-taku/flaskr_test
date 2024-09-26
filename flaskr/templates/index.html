@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+        
+    <head>
+        <meta charset="UTF-8">
+        <title>アズトレデータベース</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        <h1>アズトレデータベース</h1>
+        <h2>トレーニングの説明</h2>
+        <table class="my-table" border="1"> <!-- クラスを追加 -->
+            <tr>
+                <th>id</th>
+                <th>タイトル</th>
+                <th>関節</th>
+                <th>レベル</th>
+            </tr>
+            {% for book in books %}
+                <tr>
+                    <td>{{books.id}}</td>
+                    <td>{{book.title}}</td>
+                    <td>{{book.joint}}</td>
+                    <td>{{book.level}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <div class="button-container">
+            <a href="{{ url_for('form') }}" class="edit-button">編集</a>
+        </div>
+
+        <table class="my-table" border="1"> <!-- クラスを追加 -->
+            <tr>
+                <th>id</th>
+                <th>タイトル</th>
+                <th>関節</th>
+                <th>レベル</th>
+                <th>操作</th>
+            </tr>
+            {% for book in books %}
+            <tr>
+                <td>{{ books.id }}</td>
+                <td>{{ book.title }}</td>
+                <td>{{ book.joint }}</td>
+                <td>{{ book.level }}</td>
+                <td>
+                    <a href="#" onclick="return confirm('{{ book.title }} を削除しますか？')">削除</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+    </body>
+</html>
+
