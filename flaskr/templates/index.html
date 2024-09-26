@@ -12,12 +12,14 @@
         <h2>トレーニングの説明</h2>
         <table class="my-table" border="1"> <!-- クラスを追加 -->
             <tr>
+                <th>id</th>
                 <th>タイトル</th>
                 <th>関節</th>
                 <th>レベル</th>
             </tr>
             {% for book in books %}
                 <tr>
+                    <td>{{book.id}}</td>
                     <td>{{book.title}}</td>
                     <td>{{book.joint}}</td>
                     <td>{{book.level}}</td>

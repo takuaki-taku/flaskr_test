@@ -4,7 +4,7 @@ DATABASE= "database.db"
 
 def create_books_table():
     con = sqlite3.connect(DATABASE)
-    con.execute("CREATE TABLE IF NOT EXISTS books (id,title,joint,level)")
+    con.execute("CREATE TABLE IF NOT EXISTS books (id INTEGER PRIMARY KEY AUTOINCREMENT,title,joint,level)")
     con.close()
 
 
