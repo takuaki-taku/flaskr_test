@@ -27,7 +27,7 @@ h1 {
     color: #000; /* ヘッダーの文字色を黒に指定 */
     padding: 10px; /* パディングを指定 */
     text-align: center; /* テキストを中央に配置 */
-    max-width: 1000px; /* 最大幅を指定 */
+    width: 80%; /* h1の幅を指定 */
     margin: 0 auto; /* 中央揃え */
 }
 
@@ -78,7 +78,25 @@ h1 {
 form {
     /* 既存のスタイルはそのまま */
     background-color: white;
+    margin: 0 auto; /* 画面の中央に配置 */
+    width: 80%;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center; /* テキストを中央に配置 */
+}
+/* 削除ボタンのスタイル */
+.my-table button[type="submit"] {
+    
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    /* 追加 */
+    display: inline-block;
+}
+/* 削除ボタンのホバー効果 */
+.my-table button[type="submit"]:hover {
+    background-color: #d9534f; /* より濃い赤色 */
 }

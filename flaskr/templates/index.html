@@ -16,6 +16,7 @@
                 <th>タイトル</th>
                 <th>関節</th>
                 <th>レベル</th>
+                <th>操作</th>
             </tr>
             {% for book in books %}
                 <tr>
@@ -23,6 +24,11 @@
                     <td>{{book.title}}</td>
                     <td>{{book.joint}}</td>
                     <td>{{book.level}}</td>
+                    <td>
+                        <form method="POST" action="{{ url_for('delete', id=book.id) }}">
+                            <button type="submit" onclick="return confirm('{{ book.title }} を削除しますか？')">削除</button>
+                        </form>
+                    </td>
                 </tr>
             {% endfor %}
         </table>

@@ -2,7 +2,7 @@
 from flask import Flask
 import flask
 app=Flask(__name__)
-import main as main
+from . import main
 
 from flaskr import db
 db.create_books_table()
